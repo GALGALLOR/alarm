@@ -1,0 +1,53 @@
+<html>
+    <style>
+        table{
+            border:1px solid black;
+        }
+        a{
+            float:right;
+        }
+        label{
+            margin:5%;
+        }
+        input{
+            margin:5% 0;
+            padding:1%;
+        }
+        td{
+            border:1px solid black;
+        }
+        #submit{
+            background:none;
+            padding:1% 5%;
+        }
+        #submit:hover{
+            background:lightgreen;
+            transition:0.5s;
+        }
+    </style>
+    <body>
+        <h1>welcome {{name}}</h1>
+        <a href="/login">BackToLogin</a>
+        <form method="post">
+            <br><label for="song">Add Song</label>
+            <input placeholder='ie.Knife Talk by Drake' name='song' id='song' type="text">
+            <input id='submit' value='GO' type="submit">
+        
+        <table>
+            <tr>
+                <th>Songs:</th>
+            </tr>
+            {%for song in songs%}
+            <tr>
+            <td>{{song}}</td>
+            </tr>
+            {%endfor%}
+           
+        </table>
+        <input type="submit" name='cleartable' value='cleartable' >
+        <input type="submit" name='play' value='play' >
+        <br><input type="text" style='width:40%' name='deleted song' placeholder='enter the song you want to be deleted' >
+        <input type="submit" value='delete' >
+    </form>
+    </body>
+</html>
