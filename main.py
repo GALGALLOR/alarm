@@ -5,10 +5,10 @@ app=Flask(__name__)
 
 mydb=MySQL(app)
 import time
-app.config['MYSQL_HOST']='localhost'
-app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']='GALGALLO10'
-app.config['MYSQL_DB']='SONGS'
+app.config['MYSQL_HOST']=''
+app.config['MYSQL_USER']=''
+app.config['MYSQL_PASSWORD']=''
+app.config['MYSQL_DB']=''
 app.secret_key='yes'
 def insert_user(name,list_of_users):
     with app.app_context():
